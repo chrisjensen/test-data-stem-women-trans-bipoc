@@ -8,7 +8,7 @@ This dataset recognizes and celebrates the achievements of Women, non-binary, qu
 
 ### Geographic Distribution
 
-We aim for geographical diversity of representation
+The data set aims to be geographically diverse in representation
 
 ### Representation Categories
 - **Women in STEM**: Historical and contemporary achievements
