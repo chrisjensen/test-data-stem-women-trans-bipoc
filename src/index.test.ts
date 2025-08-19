@@ -209,6 +209,74 @@ describe('STEM Achievements Data', () => {
     });
   });
 
+  describe('Data Completeness', () => {
+    it('should have complete required fields for all people', () => {
+      const missingFields: string[] = [];
+      
+      stemAchievementsData.people.forEach((person, index) => {
+        // Required fields
+        if (!person.id) missingFields.push(`Person ${index} missing id`);
+        if (!person.fullName) missingFields.push(`Person ${index} missing fullName`);
+        if (!person.bio) missingFields.push(`Person ${index} missing bio`);
+        if (!person.email) missingFields.push(`Person ${index} missing email`);
+        if (!Array.isArray(person.tags)) missingFields.push(`Person ${index} tags not array`);
+        if (!Array.isArray(person.groupMemberships)) missingFields.push(`Person ${index} groupMemberships not array`);
+        
+        // New required fields
+        if (!person.dateOfBirth) missingFields.push(`Person ${index} (${person.fullName || person.preferredName}) missing dateOfBirth`);
+        if (person.dateOfBirth && !(person.dateOfBirth instanceof Date)) missingFields.push(`Person ${index} (${person.fullName || person.preferredName}) dateOfBirth not a Date`);
+        if (!person.pronouns) missingFields.push(`Person ${index} (${person.fullName || person.preferredName}) missing pronouns`);
+        if (person.pronouns && typeof person.pronouns !== 'string') missingFields.push(`Person ${index} (${person.fullName || person.preferredName}) pronouns not a string`);
+        
+        // Pronouns should be in expected format
+        if (person.pronouns && !['she/her', 'he/him', 'they/them'].includes(person.pronouns)) {
+          missingFields.push(`Person ${index} (${person.fullName || person.preferredName}) has invalid pronouns: ${person.pronouns}`);
+        }
+        
+        // Birth date should be reasonable (between 300-2010 for historical figures)
+        if (person.dateOfBirth) {
+          const birthYear = person.dateOfBirth.getFullYear();
+          if (birthYear <= 300 || birthYear >= 2010) {
+            missingFields.push(`Person ${index} (${person.fullName || person.preferredName}) unrealistic birth year: ${birthYear}`);
+          }
+        }
+      });
+      
+      if (missingFields.length > 0) {
+        console.error('Missing or invalid fields found:');
+        missingFields.forEach(field => console.error(`  - ${field}`));
+        expect(missingFields.length, `Found ${missingFields.length} missing/invalid fields. See console for details.`).toBe(0);
+      }
+    });
+
+    it('should properly mark First Nations people', () => {
+      const firstNationsPeople = stemAchievementsData.people.filter(person => person.isFirstNations);
+      
+      if (firstNationsPeople.length > 0) {
+        // If there are First Nations people, the metadata should reflect this
+        expect(stemAchievementsData.metadata?.containsFirstNationsPeople).toBe(true);
+        
+        // Check each First Nations person has appropriate cultural markers
+        firstNationsPeople.forEach(person => {
+          const name = person.fullName || person.preferredName;
+          console.log(`Found First Nations person: ${name}`);
+          
+          // Should have appropriate tags or bio content indicating Indigenous heritage
+          const hasIndigenousMarkers = 
+            person.tags.some(tag => tag.includes('indigenous') || tag.includes('first-nations') || tag.includes('native')) ||
+            (person.bio && (
+              person.bio.toLowerCase().includes('indigenous') ||
+              person.bio.toLowerCase().includes('first nations') ||
+              person.bio.toLowerCase().includes('native') ||
+              person.bio.toLowerCase().includes('aboriginal')
+            ));
+            
+          expect(hasIndigenousMarkers, `First Nations person ${name} should have Indigenous cultural markers in tags or bio`).toBe(true);
+        });
+      }
+    });
+  });
+
   describe('Representation Categories', () => {
     it('should include women in STEM', () => {
       const womenInSTEM = stemAchievementsData.people.filter(person => 

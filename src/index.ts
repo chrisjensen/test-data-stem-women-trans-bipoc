@@ -6,12 +6,14 @@ import type { Person, Group, Event, DataPackage, DataPackageMetadata } from 'tes
 
 export const stemAchievementsData: DataPackage = {
   metadata: {
-    containsFirstNationsPeople: false
+    containsFirstNationsPeople: false // Currently no Indigenous/First Nations scientists in dataset
   },
   people: [
     {
       id: 'katherine-johnson',
       fullName: 'Katherine Johnson',
+      dateOfBirth: new Date('1918-08-26'),
+      pronouns: 'she/her',
       bio: 'A pioneering mathematician whose calculations were critical to the success of NASA\'s early space missions, including Alan Shepard\'s 1961 spaceflight and John Glenn\'s 1962 orbital mission. Johnson overcame both racial and gender discrimination to become one of the most respected "computers" at NASA, where her mathematical precision helped ensure the safety of astronauts during the critical early years of space exploration. Her work on orbital mechanics and trajectory calculations demonstrated exceptional mathematical skill and contributed to the success of the Apollo program.',
       email: 'katherine.johnson@nasa.test',
       phone: '+1-555-864-1000',
@@ -24,6 +26,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'chien-shiung-wu',
       fullName: '吳健雄',
+      dateOfBirth: new Date('1912-05-31'),
+      pronouns: 'she/her',
       preferredName: 'Wú Jiànxióng',
       givenName: '健雄',
       surname: '吳',
@@ -40,6 +44,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'ada-lovelace',
       fullName: 'Ada Lovelace',
+      dateOfBirth: new Date('1815-12-10'),
+      pronouns: 'she/her',
       bio: 'The first computer programmer, who wrote the first algorithm intended to be processed by Charles Babbage\'s Analytical Engine in the 1840s. Lovelace recognized that the machine could go beyond mere calculation to process any symbolic information, including music and text, making her the first person to envision the broader potential of computing. Her mathematical insights and detailed notes on the Analytical Engine established fundamental concepts of computer programming that would not be fully realized until the 20th century.',
       email: 'ada.lovelace@computing-history.test',
       phone: null,
@@ -52,6 +58,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'marie-curie',
       fullName: 'Maria Skłodowska-Curie',
+      dateOfBirth: new Date('1867-11-07'),
+      pronouns: 'she/her',
       preferredName: 'Marie Curie',
       givenName: 'Maria',
       surname: 'Skłodowska',
@@ -68,6 +76,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'dorothy-vaughan',
       fullName: 'Dorothy Vaughan',
+      dateOfBirth: new Date('1910-09-20'),
+      pronouns: 'she/her',
       bio: 'A mathematician and computer programmer who became the first African American woman to supervise a group of staff at the National Advisory Committee for Aeronautics (NACA), later NASA. Vaughan specialized in calculations for flight paths and became an expert in FORTRAN programming, leading the West Area Computing Unit during the 1940s and 1950s. Her leadership and technical skills helped pave the way for other African American women in STEM, and she played a crucial role in the transition from human computers to electronic computing.',
       email: 'dorothy.vaughan@nasa.test',
       phone: '+1-555-864-1000',
@@ -78,6 +88,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'grace-hopper',
       fullName: 'Grace Hopper',
+      dateOfBirth: new Date('1906-12-09'),
+      pronouns: 'she/her',
       bio: 'A computer scientist and United States Navy rear admiral who pioneered computer programming and developed the first compiler for a computer programming language. Hopper\'s work on the UNIVAC I led to the development of COBOL, one of the first high-level programming languages, which revolutionized business computing. Her concept of machine-independent programming languages and her advocacy for standardized programming practices helped establish software engineering as a discipline.',
       email: 'grace.hopper@navy.test',
       phone: '+1-555-697-0211',
@@ -88,6 +100,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'rosalind-franklin',
       fullName: 'Rosalind Franklin',
+      dateOfBirth: new Date('1920-07-25'),
+      pronouns: 'she/her',
       bio: 'A chemist whose X-ray diffraction studies of DNA provided crucial evidence for the double helix structure, though her contributions were not fully recognized during her lifetime. Franklin\'s meticulous experimental work at King\'s College London produced the famous "Photo 51," which revealed the helical structure of DNA. Her research on the molecular structure of coal and viruses also made significant contributions to our understanding of complex molecular structures.',
       email: 'rosalind.franklin@kcl.test',
       phone: null,
@@ -98,6 +112,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'shirley-ann-jackson',
       fullName: 'Shirley Ann Jackson',
+      dateOfBirth: new Date('1946-08-05'),
+      pronouns: 'she/her',
       bio: 'A theoretical physicist who became the first African American woman to earn a doctorate from MIT and later served as president of Rensselaer Polytechnic Institute. Jackson\'s research in theoretical particle physics and solid state physics contributed to advances in telecommunications technology, including the development of touch-tone telephones and fiber optic cables. Her leadership in academia and government has helped expand opportunities for underrepresented groups in STEM fields.',
       email: 'shirley.jackson@rpi.test',
       phone: '+1-555-276-6000',
@@ -108,6 +124,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'kalpana-chawla',
       fullName: 'Kalpana Chawla',
+      dateOfBirth: new Date('1962-03-17'),
+      pronouns: 'she/her',
       bio: 'An aerospace engineer and the first woman of Indian descent to fly in space, serving as a mission specialist on the Space Shuttle Columbia. Chawla\'s work focused on fluid dynamics and microgravity research, contributing to our understanding of how materials behave in space. Her engineering expertise and determination inspired countless young people, particularly in India and among immigrant communities, to pursue careers in aerospace engineering and space exploration.',
       email: 'kalpana.chawla@nasa.test',
       phone: '+1-555-483-0000',
@@ -118,6 +136,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'jane-goodall',
       fullName: 'Jane Goodall',
+      dateOfBirth: new Date('1934-04-03'),
+      pronouns: 'she/her',
       bio: 'A primatologist and anthropologist whose groundbreaking research on chimpanzees in Tanzania revolutionized our understanding of animal behavior and human evolution. Goodall\'s long-term study of chimpanzee communities revealed their complex social structures, tool-making abilities, and emotional lives, challenging the traditional boundary between humans and other animals. Her work has influenced conservation efforts and our understanding of the natural world.',
       email: 'jane.goodall@janegoodall.test',
       phone: '+1-555-682-9220',
@@ -128,6 +148,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'sau-lan-wu',
       fullName: 'Wú Sàulán (吳秀蘭) / Sau Lan Wu',
+      dateOfBirth: new Date('1940-05-30'),
+      pronouns: 'she/her',
       bio: 'A particle physicist whose experimental work at CERN contributed to the discovery of the gluon and later the Higgs boson, fundamental particles that help explain the structure of matter. Wu\'s research on particle collisions and detector development has been crucial to advancing our understanding of the Standard Model of particle physics. Her work demonstrates the importance of experimental precision in testing theoretical predictions about the fundamental nature of the universe.',
       email: 'sau-lan.wu@cern.test',
       phone: '+41-555-767-4101',
@@ -138,6 +160,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'mamie-phipps-clark',
       fullName: 'Mamie Phipps Clark',
+      dateOfBirth: new Date('1917-04-18'),
+      pronouns: 'she/her',
       bio: 'A social psychologist whose research on racial identity and self-concept in African American children provided crucial evidence in the landmark Brown v. Board of Education case that ended legal segregation in American schools. Clark\'s "doll studies" demonstrated the psychological impact of segregation on children\'s self-esteem and racial identity. Her work established the importance of considering psychological factors in educational policy and civil rights advocacy.',
       email: 'mamie.clark@psychology-research.test',
       phone: null,
@@ -148,6 +172,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'vera-rubin',
       fullName: 'Vera Rubin',
+      dateOfBirth: new Date('1928-07-23'),
+      pronouns: 'she/her',
       bio: 'An astronomer whose observations of galaxy rotation curves provided the first compelling evidence for the existence of dark matter, revolutionizing our understanding of the universe\'s composition. Rubin\'s meticulous measurements of how stars orbit the centers of galaxies revealed that visible matter alone cannot account for the observed gravitational effects. Her work fundamentally changed cosmology and demonstrated the importance of careful observational astronomy in advancing theoretical understanding.',
       email: 'vera.rubin@carnegie-science.test',
       phone: '+1-555-686-4370',
@@ -158,6 +184,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'annie-easley',
       fullName: 'Annie Easley',
+      dateOfBirth: new Date('1933-04-23'),
+      pronouns: 'she/her',
       bio: 'A computer scientist and mathematician who worked at NASA for 34 years, developing software for the Centaur rocket stage and energy conversion systems. Easley\'s work on battery technology and alternative energy systems contributed to the development of hybrid vehicles and renewable energy storage. She overcame both racial and gender discrimination to become a respected computer scientist, and her work helped establish computer programming as a crucial component of aerospace engineering.',
       email: 'annie.easley@nasa.test',
       phone: '+1-555-433-4000',
@@ -168,6 +196,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'charlotte-angas-scott',
       fullName: 'Charlotte Angas Scott',
+      dateOfBirth: new Date('1858-06-08'),
+      pronouns: 'she/her',
       bio: 'A mathematician who became the first head of the mathematics department at Bryn Mawr College and made significant contributions to algebraic geometry and the development of mathematical education for women. Scott\'s research on plane curves and her work on the mathematical foundations of geometry helped establish rigorous standards in mathematical research. Her leadership at Bryn Mawr created opportunities for women to pursue advanced mathematics at a time when most universities excluded them from graduate programs.',
       email: 'charlotte.scott@brynmawr.test',
       phone: null,
@@ -178,6 +208,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'mary-jackson',
       fullName: 'Mary Jackson',
+      dateOfBirth: new Date('1921-04-09'),
+      pronouns: 'she/her',
       bio: 'NASA\'s first African American female engineer, who worked on wind tunnel experiments and data analysis for aircraft design during the 1950s and 1960s. Jackson\'s engineering work contributed to the safety and efficiency of aircraft design, and she later worked to promote the hiring and promotion of other women in NASA\'s engineering ranks. Her career demonstrated the importance of both technical expertise and advocacy for diversity in STEM fields.',
       email: 'mary.jackson@nasa.test',
       phone: '+1-555-864-1000',
@@ -188,6 +220,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'sophie-germain',
       fullName: 'Sophie Germain',
+      dateOfBirth: new Date('1776-04-01'),
+      pronouns: 'she/her',
       bio: 'A French mathematician who made significant contributions to number theory and mathematical physics during the early 19th century. Germain\'s work on Fermat\'s Last Theorem and her research on elasticity theory established her as one of the most important mathematicians of her time. Despite facing gender discrimination that prevented her from attending the École Polytechnique, she corresponded with leading mathematicians and made substantial contributions to mathematical research.',
       email: 'sophie.germain@mathematics-history.test',
       phone: null,
@@ -198,6 +232,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'emmy-noether',
       fullName: 'Emmy Noether',
+      dateOfBirth: new Date('1882-03-23'),
+      pronouns: 'she/her',
       bio: 'A German mathematician whose work in abstract algebra and theoretical physics revolutionized both fields. Noether\'s theorem, which connects symmetries to conservation laws, is fundamental to modern physics and has been called "one of the most important mathematical theorems ever proved in guiding the development of modern physics." Despite facing discrimination as a woman and a Jew in early 20th century Germany, she became one of the most influential mathematicians of her time.',
       email: 'emmy.noether@mathematics-history.test',
       phone: null,
@@ -208,6 +244,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'sonia-kovalevskaya',
       fullName: 'Софья Васильевна Ковалевская / Sofia Vasilyevna Kovalevskaya',
+      dateOfBirth: new Date('1850-01-15'),
+      pronouns: 'she/her',
       bio: 'A Russian mathematician who made significant contributions to analysis, partial differential equations, and mechanics. Kovalevskaya became the first woman to obtain a doctorate in mathematics and the first woman appointed to a full professorship in Northern Europe. Her work on the rotation of a solid body around a fixed point and her research on partial differential equations established her as a leading mathematician of the late 19th century.',
       email: 'sonia.kovalevskaya@mathematics-history.test',
       phone: null,
@@ -218,6 +256,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'wang-zhenyi',
       fullName: 'Wáng Zhēnyí (王貞儀) / Wang Zhenyi',
+      dateOfBirth: new Date('1768-01-01'),
+      pronouns: 'she/her',
       bio: 'A Chinese astronomer and mathematician from the Qing dynasty who made significant contributions to celestial mechanics and mathematics. Zhenyi\'s work on lunar eclipses and her mathematical calculations demonstrated exceptional skill in both observational astronomy and theoretical mathematics. Her research helped advance understanding of celestial mechanics in 18th century China and established her as one of the most accomplished female scientists of her era.',
       email: 'wang.zhenyi@chinese-astronomy.test',
       phone: null,
@@ -228,6 +268,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'caroline-herschel',
       fullName: 'Caroline Herschel',
+      dateOfBirth: new Date('1750-03-16'),
+      pronouns: 'she/her',
       bio: 'A German-born British astronomer who made significant contributions to the field of astronomy during the late 18th and early 19th centuries. Herschel discovered several comets and was the first woman to receive a salary as a scientist. Her systematic cataloging of nebulae and star clusters, along with her work on astronomical calculations, established her as one of the most important astronomers of her time and helped lay the foundation for modern stellar astronomy.',
       email: 'caroline.herschel@royal-astronomical-society.test',
       phone: null,
@@ -238,6 +280,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'maria-gaetana-agnesi',
       fullName: 'Maria Gaetana Agnesi',
+      dateOfBirth: new Date('1718-05-16'),
+      pronouns: 'she/her',
       bio: 'An Italian mathematician and philosopher who made significant contributions to calculus and mathematical analysis during the 18th century. Agnesi\'s work on differential equations and her comprehensive textbook on calculus established her as one of the leading mathematicians of her era. Her research on the "witch of Agnesi" curve demonstrated exceptional mathematical insight and helped advance the understanding of mathematical analysis.',
       email: 'maria.agnesi@italian-mathematics.test',
       phone: null,
@@ -248,6 +292,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'dorothy-hodgkin',
       fullName: 'Dorothy Hodgkin',
+      dateOfBirth: new Date('1910-05-12'),
+      pronouns: 'she/her',
       bio: 'A British chemist who pioneered the technique of X-ray crystallography to determine the structure of biomolecules. Hodgkin\'s work on the structure of penicillin, vitamin B12, and insulin revolutionized our understanding of these important compounds and earned her the 1964 Nobel Prize in Chemistry. Her research demonstrated the power of crystallography in revealing the three-dimensional structure of complex molecules.',
       email: 'dorothy.hodgkin@oxford-chemistry.test',
       phone: null,
@@ -258,6 +304,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'sophia-kovalevskaya',
       fullName: 'Софья Васильевна Ковалевская / Sofia Vasilyevna Kovalevskaya',
+      dateOfBirth: new Date('1850-01-15'),
+      pronouns: 'she/her',
       bio: 'A Russian mathematician and physicist who made significant contributions to analysis, partial differential equations, and mechanics. Kovalevskaya became the first woman to obtain a doctorate in mathematics and the first woman appointed to a full professorship in Northern Europe. Her work on the rotation of a solid body around a fixed point and her research on partial differential equations established her as a leading mathematician of the late 19th century.',
       email: 'sophia.kovalevskaya@russian-mathematics.test',
       phone: null,
@@ -268,6 +316,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'maria-mitchell',
       fullName: 'Maria Mitchell',
+      dateOfBirth: new Date('1818-08-01'),
+      pronouns: 'she/her',
       bio: 'An American astronomer who discovered a comet in 1847, becoming the first American woman to do so. Mitchell\'s discovery earned her international recognition and a gold medal from the King of Denmark. She became the first woman elected to the American Academy of Arts and Sciences and later served as a professor of astronomy at Vassar College, where she established the first astronomy program for women in the United States.',
       email: 'maria.mitchell@vassar-astronomy.test',
       phone: null,
@@ -278,6 +328,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'hypatia',
       fullName: 'Hypatia',
+      dateOfBirth: new Date('0350-01-01'),
+      pronouns: 'she/her',
       bio: 'A Greek mathematician, astronomer, and philosopher who lived in Alexandria during the late 4th and early 5th centuries CE. Hypatia was the head of the Neoplatonic school in Alexandria and made significant contributions to mathematics and astronomy. Her work on conic sections and her commentaries on mathematical texts helped preserve and advance mathematical knowledge during a period of great cultural change.',
       email: 'hypatia@ancient-mathematics.test',
       phone: null,
@@ -288,6 +340,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'lise-meitner',
       fullName: 'Lise Meitner',
+      dateOfBirth: new Date('1878-11-07'),
+      pronouns: 'she/her',
       bio: 'An Austrian-Swedish physicist who made significant contributions to nuclear physics and radioactivity. Meitner\'s work on nuclear fission with Otto Hahn and Fritz Strassmann led to the discovery of nuclear fission, though her contributions were not fully recognized when Hahn received the Nobel Prize in Chemistry. Her research on beta decay and her theoretical work on nuclear processes established her as one of the leading nuclear physicists of the early 20th century.',
       email: 'lise.meitner@nuclear-physics.test',
       phone: null,
@@ -298,6 +352,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'sophia-brahe',
       fullName: 'Sophia Brahe',
+      dateOfBirth: new Date('1556-09-24'),
+      pronouns: 'she/her',
       bio: 'A Danish astronomer and horticulturist who made significant contributions to astronomy during the late 16th century. Brahe assisted her brother Tycho Brahe in his astronomical observations and calculations, contributing to the development of observational astronomy. Her work on plant breeding and horticulture also demonstrated her scientific approach to agriculture, making her one of the most accomplished female scientists of the Renaissance period.',
       email: 'sophia.brahe@danish-astronomy.test',
       phone: null,
@@ -308,6 +364,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'maria-sibylla-merian',
       fullName: 'Maria Sibylla Merian',
+      dateOfBirth: new Date('1647-04-02'),
+      pronouns: 'she/her',
       bio: 'A German-born naturalist and scientific illustrator who made significant contributions to entomology and botany during the late 17th and early 18th centuries. Merian\'s detailed illustrations of insects and their life cycles, particularly her work on the metamorphosis of butterflies, revolutionized the study of entomology. Her scientific expeditions to Suriname and her meticulous documentation of tropical flora and fauna established her as one of the most important naturalists of her time.',
       email: 'maria.merian@german-natural-history.test',
       phone: null,
@@ -318,6 +376,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'elena-cornaro-piscopia',
       fullName: 'Elena Cornaro Piscopia',
+      dateOfBirth: new Date('1646-06-05'),
+      pronouns: 'she/her',
       bio: 'An Italian mathematician and philosopher who became the first woman to receive a doctoral degree in 1678. Piscopia\'s work in mathematics and philosophy demonstrated exceptional intellectual ability, and she was appointed to the chair of mathematics at the University of Padua. Her achievements helped pave the way for other women to pursue advanced education in mathematics and philosophy during a time when such opportunities were extremely limited.',
       email: 'elena.piscopia@italian-mathematics.test',
       phone: null,
@@ -328,6 +388,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'srinivasa-ramanujan',
       fullName: 'श्रीनिवास रामानुजन',
+      dateOfBirth: new Date('1887-12-22'),
+      pronouns: 'he/him',
       preferredName: 'Srīnivāsa Rāmānujan',
       givenName: 'श्रीनिवास',
       surname: 'रामानुजन',
@@ -344,6 +406,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'cv-raman',
       fullName: 'चन्द्रशेखर वेंकट रामन्',
+      dateOfBirth: new Date('1888-11-07'),
+      pronouns: 'he/him',
       preferredName: 'C. V. Raman',
       givenName: 'चन्द्रशेखर',
       surname: 'रामन्',
@@ -360,6 +424,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'a-p-j-abdul-kalam',
       fullName: 'अब्दुल कलाम / A. P. J. Abdul Kalam',
+      dateOfBirth: new Date('1931-10-15'),
+      pronouns: 'he/him',
       bio: 'A. P. J. Abdul Kalam, known as the "Missile Man of India," played a pivotal role in developing India\'s ballistic missile and nuclear weapons programs. As a scientist and engineer, he led the development of the Agni and Prithvi missiles and contributed to India\'s first nuclear test in 1998. Later serving as the 11th President of India, Kalam inspired millions of young people to pursue science and technology, earning the title "People\'s President" for his dedication to education and youth empowerment.',
       email: 'apj.kalam@drdo.test',
       phone: null,
@@ -372,6 +438,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'teuku-mohammad-hassan',
       fullName: 'Teuku Mohammad Hassan',
+      dateOfBirth: new Date('1906-01-01'),
+      pronouns: 'he/him',
       bio: 'Teuku Mohammad Hassan was Indonesia\'s pioneering geologist who established the nation\'s geological survey and advanced understanding of Southeast Asian tectonics. His research on the geological structure of the Indonesian archipelago provided crucial insights into the region\'s volcanic activity and earthquake patterns. Hassan\'s work laid the foundation for modern geological studies in Indonesia and contributed significantly to natural disaster preparedness in one of the world\'s most seismically active regions.',
       email: 't.hassan@geology.test',
       phone: null,
@@ -384,6 +452,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'flossie-wong-staal',
       fullName: 'Flossie Wong-Staal (黃以靜)',
+      dateOfBirth: new Date('1947-08-27'),
+      pronouns: 'she/her',
       bio: 'Flossie Wong-Staal was a pioneering virologist who played a crucial role in identifying HIV as the cause of AIDS and developing the first genetic map of the virus. Born in China and trained in the United States, she was the first scientist to clone HIV and determine its complete genetic structure. Her groundbreaking research provided the foundation for HIV testing, antiviral drug development, and vaccine research, making her one of the most influential scientists in the fight against AIDS.',
       email: 'fwong.staal@scripps.test',
       phone: null,
@@ -396,6 +466,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'cheikh-anta-diop',
       fullName: 'Cheikh Anta Diop',
+      dateOfBirth: new Date('1923-12-29'),
+      pronouns: 'he/him',
       bio: 'Cheikh Anta Diop was a Senegalese historian, anthropologist, and physicist who revolutionized the study of ancient African civilizations through scientific methods. He developed carbon-dating techniques specifically for African archaeological sites and used melanin analysis to demonstrate that ancient Egyptians were Black Africans. His multidisciplinary approach, combining physics, chemistry, and archaeology, challenged Eurocentric historical narratives and established African contributions to world civilization on scientific grounds.',
       email: 'ca.diop@dakar.test',
       phone: null,
@@ -408,6 +480,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'wangari-maathai-scientist',
       fullName: 'Wangari Muta Maathai',
+      dateOfBirth: new Date('1940-04-01'),
+      pronouns: 'she/her',
       bio: 'Wangari Maathai was a Kenyan environmental scientist who founded the Green Belt Movement, combining environmental conservation with community empowerment and women\'s rights. With a Ph.D. in biological sciences, she understood that deforestation and environmental degradation were interconnected with poverty and social injustice. Her scientific approach to reforestation, focusing on indigenous tree species and community-based conservation, earned her the Nobel Peace Prize in 2004 and established her as a pioneer in sustainable development.',
       email: 'w.maathai@greenbelt.test',
       phone: null,
@@ -420,6 +494,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'thomas-adeoye-lambo',
       fullName: 'Thomas Adeoye Lambo',
+      dateOfBirth: new Date('1923-03-29'),
+      pronouns: 'he/him',
       bio: 'Thomas Adeoye Lambo was a Nigerian psychiatrist who revolutionized mental health care in Africa and globally as the first African to lead the World Health Organization\'s mental health program. He integrated traditional African healing practices with modern psychiatry, developing the "Aro Village System" which treated mental illness within community settings rather than isolated institutions. His innovative approach influenced global mental health policy and demonstrated how indigenous knowledge could enhance modern medical practice.',
       email: 't.lambo@who.test',
       phone: null,
@@ -432,6 +508,8 @@ export const stemAchievementsData: DataPackage = {
     {
       id: 'quarraisha-abdool-karim',
       fullName: 'Quarraisha Abdool Karim',
+      dateOfBirth: new Date('1960-07-29'),
+      pronouns: 'she/her',
       bio: 'Quarraisha Abdool Karim is a South African infectious diseases epidemiologist who has led groundbreaking research on HIV prevention, particularly focusing on women and adolescents in Africa. Her work on microbicides and pre-exposure prophylaxis (PrEP) has provided crucial tools for HIV prevention in populations most at risk. As one of Africa\'s leading scientists, she has shaped global HIV research policy and demonstrated how locally-conducted research can address global health challenges.',
       email: 'q.abdoolkarim@caprisa.test',
       phone: null,
