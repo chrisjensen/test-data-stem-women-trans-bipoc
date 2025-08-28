@@ -8,6 +8,7 @@
         "build": "tsc",
         "test": "vitest run",
         "test:watch": "vitest",
+        "test:image": "vitest run --config vitest.image.config.ts",
         "dev": "tsx src/index.ts",
         "generate-diversity": "node scripts/generate-diversity-report.js"
     },
